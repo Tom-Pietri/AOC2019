@@ -35,4 +35,4 @@ computeFirstStep = do
   let firstWirePositions = computeAllPositions firstWireDirections [] (0,0)
   let secondWirePositions = computeAllPositions secondWireDirections [] (0,0)
 
-  [computeManhattanDistance x | x <- firstWirePositions, x `elem` secondWirePositions]
+  minimum [computeManhattanDistance x | x <- firstWirePositions, x `elem` secondWirePositions]
